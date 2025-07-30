@@ -19,35 +19,35 @@ const ServicesPage = () => {
       {/* Job Categories Section */}
       <section className="job-categories" id="services">
         <div className="container">
-          <h2>Our Job Categories</h2>
-          <p className="section-subtitle">Explore the different types of roles we offer through our partner companies</p>
+          <h2>{t.jobCategoriesTitle}</h2>
+          <p className="section-subtitle">{t.jobCategoriesSubtitle}</p>
           
           <div className="categories-grid">
             <div className="category-card">
               <div className="category-header">
                 <div className="category-icon">🛠️</div>
-                <h3>Engineer / Technician Roles</h3>
-                <div className="experience-level">2-3 years experience</div>
+                <h3>{t.engineerTechnician}</h3>
+                <div className="experience-level">{t.experienceLevel}</div>
               </div>
               
               <div className="job-titles">
-                <h4>📋 Job Titles:</h4>
+                <h4>📋 {t.jobTitles}</h4>
                 <ul>
-                  <li>Field Engineer – Transmission & IP</li>
-                  <li>Telecom Technician – Air Fiber & WiFi</li>
-                  <li>Network Installation Engineer</li>
-                  <li>UBR/ENT Site Maintenance Engineer</li>
+                  <li>{t.fieldEngineer}</li>
+                  <li>{t.telecomTechnician}</li>
+                  <li>{t.networkInstallation}</li>
+                  <li>{t.ubrSiteMaintenance}</li>
                 </ul>
               </div>
               
               <div className="responsibilities">
-                <h4>✅ Responsibilities:</h4>
+                <h4>✅ {t.responsibilities}</h4>
                 <ul>
-                  <li>Maintain and troubleshoot Air Fiber, WiFi, UBR/ENT sites</li>
-                  <li>Work on L2/L3 routers, SMPS, patch cords, and transmission lines</li>
-                  <li>Coordinate with NOC (Network Operation Center)</li>
-                  <li>Conduct physical surveys and manage site architecture data</li>
-                  <li>Fault diagnosis and timely escalation to the supervisor</li>
+                  <li>{t.maintainTroubleshoot}</li>
+                  <li>{t.workOnRouters}</li>
+                  <li>{t.coordinateWithNOC}</li>
+                  <li>{t.conductSurveys}</li>
+                  <li>{t.faultDiagnosis}</li>
                 </ul>
               </div>
             </div>
@@ -55,29 +55,29 @@ const ServicesPage = () => {
             <div className="category-card">
               <div className="category-header">
                 <div className="category-icon">👨‍💼</div>
-                <h3>IBS / Transmission Supervisory Roles</h3>
-                <div className="experience-level">4-6 years experience</div>
+                <h3>{t.ibsSupervisory}</h3>
+                <div className="experience-level">{t.experienceLevelSenior}</div>
               </div>
               
               <div className="job-titles">
-                <h4>📋 Job Titles:</h4>
+                <h4>📋 {t.jobTitles}</h4>
                 <ul>
-                  <li>IBS Site Supervisor</li>
-                  <li>Telecom Network Operations Supervisor</li>
-                  <li>Regional O&M (Operation & Maintenance) Lead</li>
-                  <li>SMPS & ISP Coordination Supervisor</li>
+                  <li>{t.ibsSiteSupervisor}</li>
+                  <li>{t.telecomNetworkOps}</li>
+                  <li>{t.regionalOMLead}</li>
+                  <li>{t.smpsISPCoordination}</li>
                 </ul>
               </div>
               
               <div className="responsibilities">
-                <h4>✅ Responsibilities:</h4>
+                <h4>✅ {t.responsibilities}</h4>
                 <ul>
-                  <li>Lead and train technicians and field engineers</li>
-                  <li>Oversee audits, quality checks, and HOTO (handover/takeover)</li>
-                  <li>Coordinate preventive & corrective maintenance (PM/CM)</li>
-                  <li>Ensure safety compliance, PPE usage, training documentation</li>
-                  <li>Manage spares, equipment health, and GIS/asset updates</li>
-                  <li>Interact with Jio Circle Planners & NOC for timely resolution</li>
+                  <li>{t.leadAndTrain}</li>
+                  <li>{t.overseeAudits}</li>
+                  <li>{t.coordinateMaintenance}</li>
+                  <li>{t.ensureSafety}</li>
+                  <li>{t.manageSpares}</li>
+                  <li>{t.interactWithJio}</li>
                 </ul>
               </div>
             </div>
@@ -88,51 +88,51 @@ const ServicesPage = () => {
       {/* Companies Section */}
       <section className="companies-section">
         <div className="container">
-          <h2>Our Partner Companies</h2>
-          <p className="section-subtitle">These jobs are offered by different leading telecom companies across India</p>
+          <h2>{t.partnerCompanies}</h2>
+          <p className="section-subtitle">{t.partnerCompaniesSubtitle}</p>
           
           <div className="companies-grid">
             <div className="company-card">
               <div className="company-logo">📱</div>
-              <h3>Reliance Jio</h3>
-              <p>India's largest telecom operator with extensive network coverage</p>
+              <h3>{t.relianceJio}</h3>
+              <p>{t.relianceJioDesc}</p>
               <div className="company-roles">
-                <h4>Available Roles:</h4>
+                <h4>{t.availableRoles}</h4>
                 <ul>
-                  <li>Fiber Installation Engineer</li>
-                  <li>Network Operations Specialist</li>
-                  <li>Site Maintenance Technician</li>
-                  <li>Customer Service Representative</li>
+                  <li>{t.fiberInstallation}</li>
+                  <li>{t.networkOperations}</li>
+                  <li>{t.siteMaintenance}</li>
+                  <li>{t.customerService}</li>
                 </ul>
               </div>
             </div>
 
             <div className="company-card">
               <div className="company-logo">📡</div>
-              <h3>Bharti Airtel</h3>
-              <p>Premier telecom company with pan-India presence</p>
+              <h3>{t.bhartiAirtel}</h3>
+              <p>{t.bhartiAirtelDesc}</p>
               <div className="company-roles">
-                <h4>Available Roles:</h4>
+                <h4>{t.availableRoles}</h4>
                 <ul>
-                  <li>IBS Site Engineer</li>
-                  <li>Network Installation Technician</li>
-                  <li>Operations Supervisor</li>
-                  <li>Field Service Engineer</li>
+                  <li>{t.ibsSiteEngineer}</li>
+                  <li>{t.networkInstallationTech}</li>
+                  <li>{t.operationsSupervisor}</li>
+                  <li>{t.fieldServiceEngineer}</li>
                 </ul>
               </div>
             </div>
 
             <div className="company-card">
               <div className="company-logo">🏢</div>
-              <h3>BSNL</h3>
-              <p>Government-owned telecom service provider</p>
+              <h3>{t.bsnl}</h3>
+              <p>{t.bsnlDesc}</p>
               <div className="company-roles">
-                <h4>Available Roles:</h4>
+                <h4>{t.availableRoles}</h4>
                 <ul>
-                  <li>Telecom Technician</li>
-                  <li>Network Maintenance Engineer</li>
-                  <li>Regional Operations Lead</li>
-                  <li>Infrastructure Specialist</li>
+                  <li>{t.telecomTechnicianRole}</li>
+                  <li>{t.networkMaintenance}</li>
+                  <li>{t.regionalOperations}</li>
+                  <li>{t.infrastructureSpecialist}</li>
                 </ul>
               </div>
             </div>
@@ -143,30 +143,30 @@ const ServicesPage = () => {
       {/* Benefits Section */}
       <section className="benefits-section">
         <div className="container">
-          <h2>Why Choose Tele Tower?</h2>
+          <h2>{t.whyChooseUs}</h2>
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-icon">📍</div>
-              <h3>Local Opportunities</h3>
-              <p>Find jobs in your own city or nearby areas, reducing commute time and improving work-life balance.</p>
+              <h3>{t.localOpportunitiesTitle}</h3>
+              <p>{t.localOpportunitiesDesc}</p>
             </div>
             
             <div className="benefit-card">
               <div className="benefit-icon">🏢</div>
-              <h3>Top Companies</h3>
-              <p>Work with India's leading telecom companies including Jio, Airtel, Vodafone, and more.</p>
+              <h3>{t.topCompanies}</h3>
+              <p>{t.topCompaniesDesc}</p>
             </div>
             
             <div className="benefit-card">
               <div className="benefit-icon">📈</div>
-              <h3>Career Growth</h3>
-              <p>Clear career progression paths from technician to supervisory roles with proper training.</p>
+              <h3>{t.careerGrowth}</h3>
+              <p>{t.careerGrowthDesc}</p>
             </div>
             
             <div className="benefit-card">
               <div className="benefit-icon">💰</div>
-              <h3>Competitive Salaries</h3>
-              <p>Attractive compensation packages with benefits and performance-based incentives.</p>
+              <h3>{t.competitiveSalaries}</h3>
+              <p>{t.competitiveSalariesDesc}</p>
             </div>
             
             <div className="benefit-card">
