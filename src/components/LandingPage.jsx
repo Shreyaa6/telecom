@@ -2,6 +2,9 @@ import React from 'react';
 import { useLanguage } from './LanguageContext.jsx';
 import { translations } from '../data/translations.js';
 import teleImage from '../assets/tele.jpg';
+import jobImage from '../assets/job.jpg';
+import networkImage from '../assets/network.jpg';
+import telImage from '../assets/tel.jpg';
 import '../styles/LandingPage.css';
 
 
@@ -82,37 +85,37 @@ const LandingPage = () => {
           <div className="blog-grid">
             <article className="blog-card animate-fade-in hover-lift">
               <div className="blog-image" style={{
-                background: 'linear-gradient(135deg, #0D1321, #1D2D44), url(${teleImage})',
+                background: `linear-gradient(135deg, rgba(13, 19, 33, 0.8), rgba(29, 45, 68, 0.7)), url(${jobImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}></div>
               <div className="blog-content">
-                <h3>{t.futureOfTelecom}</h3>
-                <p>{t.futureOfTelecomDesc}</p>
+                <h3>Local Telecom Job Opportunities</h3>
+                <p>Discover exciting career opportunities in your local telecom sector. From network engineers to customer service roles, find the perfect position that matches your skills and location preferences.</p>
                 <a href="#" className="read-more">{t.readMore}</a>
               </div>
             </article>
             <article className="blog-card animate-fade-in hover-lift" style={{animationDelay: '0.2s'}}>
               <div className="blog-image" style={{
-                background: 'linear-gradient(135deg, #3E5C76, #748CAB), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
+                background: `linear-gradient(135deg, rgba(62, 92, 118, 0.8), rgba(116, 140, 171, 0.7)), url(${networkImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}></div>
               <div className="blog-content">
-                <h3>{t.digitalTransformation}</h3>
-                <p>{t.digitalTransformationDesc}</p>
+                <h3>Regional Network Expansion</h3>
+                <p>Stay updated on the latest network expansion projects across different regions. Learn about new infrastructure developments and how they create job opportunities in telecom.</p>
                 <a href="#" className="read-more">{t.readMore}</a>
               </div>
             </article>
             <article className="blog-card animate-fade-in hover-lift" style={{animationDelay: '0.4s'}}>
               <div className="blog-image" style={{
-                background: 'linear-gradient(135deg, #1D2D44, #F0EBD8), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
+                background: `linear-gradient(135deg, rgba(29, 45, 68, 0.8), rgba(240, 235, 216, 0.7)), url(${telImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}></div>
               <div className="blog-content">
-                <h3>{t.sustainablePractices}</h3>
-                <p>{t.sustainablePracticesDesc}</p>
+                <h3>Community Telecom Projects</h3>
+                <p>Explore community-driven telecom initiatives that are transforming local connectivity. See how these projects create sustainable employment opportunities.</p>
                 <a href="#" className="read-more">{t.readMore}</a>
               </div>
             </article>
