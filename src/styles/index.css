@@ -28,16 +28,16 @@
   --bg-cool: #f0f9ff;
 
   /* Natural Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-warm: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-  --gradient-cool: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --gradient-primary: linear-gradient(135deg, #0D1321 0%, #1D2D44 100%);
+  --gradient-secondary: linear-gradient(135deg, #3E5C76 0%, #748CAB 100%);
+  --gradient-warm: linear-gradient(135deg, #F0EBD8 0%, #E8E0C8 100%);
+  --gradient-cool: linear-gradient(135deg, #748CAB 0%, #F0EBD8 100%);
 
   /* Organic Shadows */
   --shadow-soft: 0 2px 15px rgba(0, 0, 0, 0.08);
   --shadow-medium: 0 4px 25px rgba(0, 0, 0, 0.12);
   --shadow-strong: 0 8px 40px rgba(0, 0, 0, 0.15);
-  --shadow-colored: 0 10px 30px rgba(102, 126, 234, 0.2);
+  --shadow-colored: 0 10px 30px rgba(62, 92, 118, 0.2);
 
   /* Natural Border Radius */
   --radius-small: 8px;

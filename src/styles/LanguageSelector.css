@@ -37,7 +37,7 @@
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -98,7 +98,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: var(--gradient-secondary);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -108,9 +108,9 @@
 }
 
 .language-option:hover {
-  border-color: #667eea;
+  border-color: var(--steel-blue);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  box-shadow: 0 8px 24px rgba(62, 92, 118, 0.15);
 }
 
 .language-flag {
@@ -141,7 +141,7 @@
 
 .language-arrow {
   font-size: 1.2rem;
-  color: #667eea;
+  color: var(--steel-blue);
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease;

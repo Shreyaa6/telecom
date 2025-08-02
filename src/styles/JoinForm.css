@@ -1,0 +1,176 @@
+/* Join Form Styles - Premium & Modern */
+.join {
+  background: var(--gradient-primary);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.join::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="join-pattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="2" fill="%23F0EBD8" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23join-pattern)"/></svg>');
+  animation: gradientShift 20s ease infinite;
+}
+
+.join h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+.join h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-secondary);
+  border-radius: 2px;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.join p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--cream);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+}
+
+.join-button-container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.join-us-today-btn {
+  background: var(--gradient-button);
+  color: white;
+  border: none;
+  padding: 2rem 4rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 20px 40px rgba(62, 92, 118, 0.3);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+  justify-content: center;
+}
+
+.join-us-today-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.join-us-today-btn:hover::before {
+  left: 100%;
+}
+
+.join-us-today-btn:hover {
+  background: var(--gradient-secondary);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 30px 60px rgba(62, 92, 118, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.join-us-today-btn:active {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(62, 92, 118, 0.3);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.btn-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.join-us-today-btn:hover .btn-icon {
+  transform: translateX(8px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .join {
+    padding: 80px 0;
+  }
+  
+  .join h2 {
+    font-size: 3rem;
+  }
+  
+  .join p {
+    font-size: 1.1rem;
+  }
+  
+  .join-us-today-btn {
+    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join {
+    padding: 60px 0;
+  }
+  
+  .join h2 {
+    font-size: 2.5rem;
+  }
+  
+  .join p {
+    font-size: 1rem;
+  }
+  
+  .join-us-today-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    min-width: 200px;
+  }
+} 

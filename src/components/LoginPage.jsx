@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from './src/LanguageContext.jsx';
-import { translations } from './src/translations.js';
+import { useLanguage } from './LanguageContext.jsx';
+import { translations } from '../data/translations.js';
 import LanguageSelector from './LanguageSelector.jsx';
-import './LoginPage.css';
+import teleImage from '../assets/tele.jpg';
+import '../styles/LoginPage.css';
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const { language, changeLanguage } = useLanguage();
   const [showLanguageSelector, setShowLanguageSelector] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const t = translations[language];
   
   useEffect(() => {
@@ -21,7 +23,16 @@ const LoginPage = () => {
   }, []);
   
   const handleJoinUs = () => {
-    navigate('/main');
+    setIsLoading(true);
+    try {
+      navigate('/main');
+    } catch (error) {
+      console.error('Navigation error:', error);
+      // Fallback: try to navigate programmatically
+      window.location.href = '/main';
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleLanguageSelect = (selectedLanguage) => {
@@ -30,7 +41,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page" style={{ backgroundImage: `linear-gradient(135deg, rgba(13, 19, 33, 0.9), rgba(62, 92, 118, 0.8)), url(${teleImage})` }}>
       <div className="login-overlay"></div>
       <div className="login-container">
         <div className="login-card">
@@ -45,9 +56,9 @@ const LoginPage = () => {
               <p>{t.welcomeSubtitle}</p>
             </div>
             
-            <button className="join-us-btn" onClick={handleJoinUs}>
-              <span className="btn-text">{t.joinUsButton}</span>
-              <span className="btn-icon">→</span>
+            <button className="join-us-btn" onClick={handleJoinUs} disabled={isLoading}>
+              <span className="btn-text">{isLoading ? 'Loading...' : t.joinUsButton}</span>
+              <span className="btn-icon">{isLoading ? '⏳' : '→'}</span>
             </button>
             
             <div className="features">

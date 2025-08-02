@@ -1,7 +1,9 @@
 import React from 'react';
-import { useLanguage } from './src/LanguageContext.jsx';
-import { translations } from './src/translations.js';
-import './LandingPage.css';
+import { useLanguage } from './LanguageContext.jsx';
+import { translations } from '../data/translations.js';
+import teleImage from '../assets/tele.jpg';
+import '../styles/LandingPage.css';
+
 
 const LandingPage = () => {
   const { language } = useLanguage();
@@ -20,7 +22,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       {/* Hero Section */}
-      <section className="hero" id="home">
+      <section className="hero" id="home" style={{ backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${teleImage})` }}>
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="gradient-text animate-fade-in">{t.heroTitle}</h1>
@@ -72,14 +74,15 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
+      {/* Blog Section - Local News & Highlights */}
       <section className="blog" id="blog">
         <div className="container">
           <h2 className="animate-fade-in">{t.latestNews}</h2>
+          <p className="blog-subtitle animate-fade-in">{t.blogSubtitle}</p>
           <div className="blog-grid">
             <article className="blog-card animate-fade-in hover-lift">
               <div className="blog-image" style={{
-                background: 'linear-gradient(135deg, #6366f1, #8b5cf6), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
+                background: 'linear-gradient(135deg, #0D1321, #1D2D44), url(${teleImage})',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}></div>
@@ -91,7 +94,7 @@ const LandingPage = () => {
             </article>
             <article className="blog-card animate-fade-in hover-lift" style={{animationDelay: '0.2s'}}>
               <div className="blog-image" style={{
-                background: 'linear-gradient(135deg, #f59e0b, #ef4444), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
+                background: 'linear-gradient(135deg, #3E5C76, #748CAB), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}></div>
@@ -103,7 +106,7 @@ const LandingPage = () => {
             </article>
             <article className="blog-card animate-fade-in hover-lift" style={{animationDelay: '0.4s'}}>
               <div className="blog-image" style={{
-                background: 'linear-gradient(135deg, #10b981, #059669), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
+                background: 'linear-gradient(135deg, #1D2D44, #F0EBD8), url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}></div>
@@ -113,6 +116,60 @@ const LandingPage = () => {
                 <a href="#" className="read-more">{t.readMore}</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="statistics" id="statistics">
+        <div className="container">
+          <h2 className="animate-fade-in">Our Impact</h2>
+          <div className="stats-grid">
+            <div className="stat-item animate-scale-in">
+              <div className="stat-number">500+</div>
+              <div className="stat-label">Jobs Posted</div>
+            </div>
+            <div className="stat-item animate-scale-in" style={{animationDelay: '0.2s'}}>
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Partner Companies</div>
+            </div>
+            <div className="stat-item animate-scale-in" style={{animationDelay: '0.4s'}}>
+              <div className="stat-number">25+</div>
+              <div className="stat-label">Cities Covered</div>
+            </div>
+            <div className="stat-item animate-scale-in" style={{animationDelay: '0.6s'}}>
+              <div className="stat-number">1000+</div>
+              <div className="stat-label">Successful Placements</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="how-it-works" id="how-it-works">
+        <div className="container">
+          <h2 className="animate-fade-in">How It Works</h2>
+          <div className="steps-grid">
+            <div className="step-item animate-fade-in-left">
+              <div className="step-icon">📝</div>
+              <h3>1. Create Profile</h3>
+              <p>Sign up and create your professional profile with skills and experience</p>
+            </div>
+            <div className="step-item animate-fade-in-left" style={{animationDelay: '0.2s'}}>
+              <div className="step-icon">🔍</div>
+              <h3>2. Browse Jobs</h3>
+              <p>Explore local telecom opportunities from leading companies</p>
+            </div>
+            <div className="step-item animate-fade-in-left" style={{animationDelay: '0.4s'}}>
+              <div className="step-icon">📱</div>
+              <h3>3. Apply</h3>
+              <p>Apply to positions that match your skills and location preferences</p>
+            </div>
+            <div className="step-item animate-fade-in-left" style={{animationDelay: '0.6s'}}>
+              <div className="step-icon">✅</div>
+              <h3>4. Get Hired</h3>
+              <p>Connect with employers and start your telecom career journey</p>
+            </div>
           </div>
         </div>
       </section>

@@ -11,7 +11,10 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('english');
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem('preferred-language');
+    return savedLanguage || 'english';
+  });
 
   const changeLanguage = (lang) => {
     setLanguage(lang);

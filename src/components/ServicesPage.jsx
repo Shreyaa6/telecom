@@ -1,7 +1,7 @@
 import React from 'react';
-import { useLanguage } from './src/LanguageContext.jsx';
-import { translations } from './src/translations.js';
-import './ServicesPage.css';
+import { useLanguage } from './LanguageContext.jsx';
+import { translations } from '../data/translations.js';
+import '../styles/ServicesPage.css';
 
 const ServicesPage = () => {
   const { language } = useLanguage();
